@@ -1,0 +1,21 @@
+{
+  "name": "rekwestbot",
+  "version": "1.0.0",
+  "description": "Full Stack Vue/Express bot for twitch streamers who play Rocksmith",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "John Paul Wile",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
