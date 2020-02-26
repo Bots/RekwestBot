@@ -13,7 +13,8 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const posts = await loadPostCollection()
     await posts.insertOne({
-        text: req.body.text,
+        artist: req.body.artist,
+        title: req.body.title,
         createdAt: new Date()
     })
     res.status(201).send()
@@ -32,7 +33,6 @@ async function loadPostCollection() {
     ('mongodb+srv://botsone:pomeroys@cluster0-t06fs.mongodb.net/test?retryWrites=true&w=majority', {
         useNewUrlParser: true
     })
-
     return client.db('vue_express').collection('posts')
 }
 

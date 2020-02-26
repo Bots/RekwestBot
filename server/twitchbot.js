@@ -108,7 +108,8 @@ function onMessageHandler(target, context, msg, self) {
       //One song was detected, add it to the database
       } if (results.length === 1) {
         axios.post(url, {
-          text: strippedSR
+          artist: separatedResults[0],
+          title: separatedResults[1]
         })
         .then(function (response) {
           console.log(response);
