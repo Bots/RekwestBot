@@ -26,6 +26,7 @@ router.delete('/:id', async (req, res) => {
     res.status(200).send()
 })
 
+// Load Posts
 async function loadPostCollection() {
     const client = await mongodb.MongoClient.connect
     ('mongodb+srv://botsone:pomeroys@cluster0-t06fs.mongodb.net/test?retryWrites=true&w=majority', {
